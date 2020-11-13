@@ -27,10 +27,10 @@ function checkWin(){
         var tab=['','',''];
         for(i=0;i<3;i++) tab[i]= board[x[i]];
     
-        if((tab.every( (val,i, arr) => (val === arr[0]) && (arr[0]!== '')))){
-            
-            if(roundNr%2) alert("Koniec gry - WYGRAŁ GRACZ nr 1, wcisnij 'OK' aby zagrać ponownie...");
-            else alert("Koniec gry - WYGRAŁ GRACZ nr 2, wcisnij 'OK' aby zagrać ponownie...");
+          if((tab.every( (val,i, arr) => (val === arr[0]) && (arr[0])))){
+    
+            if(roundNr%2) alert("Koniec gry - WYGRAŁ GRACZ nr 2, wcisnij 'OK' aby zagrać ponownie...");
+            else alert("Koniec gry - WYGRAŁ GRACZ nr 1, wcisnij 'OK' aby zagrać ponownie...");
             window.location.reload();      
         }
         else if(roundNr === 10){
