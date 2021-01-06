@@ -23,19 +23,18 @@ function action(e){
 function checkWin(){
 
     for(x of winPossibilities){
-        
+
         var tab=['','',''];
         for(i=0;i<3;i++) tab[i]= board[x[i]];
-    
           if((tab.every( (val,i, arr) => (val === arr[0]) && (arr[0])))){
-    
+
             if(roundNr%2) alert("Koniec gry - WYGRAŁ GRACZ nr 2, wcisnij 'OK' aby zagrać ponownie...");
             else alert("Koniec gry - WYGRAŁ GRACZ nr 1, wcisnij 'OK' aby zagrać ponownie...");
-            window.location.reload();      
+            window.location.reload();
         }
         else if(roundNr === 10){
              alert("Koniec gry - REMIS, wcisnij 'OK' aby zagrać ponownie...");
-             window.location.reload();      
+             window.location.reload();
         }
 
     }
